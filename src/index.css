@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'IntegralCF';
+  src: url('../src/fonts/integralcf.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: satoshi;
+    src: url('./fonts/Satoshi-Regular.otf');
+    font-weight: normal;
+  font-style: normal;
+}
+@theme {
+  @keyframes infinite-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  --animate-infinite-slide: infinite-slide 25s linear infinite;
+}
