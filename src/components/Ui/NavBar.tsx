@@ -25,10 +25,10 @@ const NavBar = () => {
         <h1 className="font-bold font-[IntegralCF] text-3xl md:text-4xl">SHOP.CO</h1>
 </div>
         <div className="hidden md:flex flex-row justify-between gap-8 font-[satoshi] rounded-xl ">
-          <button className="hover:shadow-sm p-2 rounded-2xl cursor-pointer">Shop</button> 
-          <button className="hover:shadow-sm p-2 rounded-2xl cursor-pointer"> On Sale </button>
-          <button className="hover:shadow-sm p-2 rounded-2xl cursor-pointer"> New Arrivals </button>
-          <button className="hover:shadow-sm p-2 rounded-2xl cursor-pointer"> Brands </button>
+          <button className="cursor-pointer">Shop</button> 
+          <button className="cursor-pointer"> On Sale </button>
+          <button className="cursor-pointer"> New Arrivals </button>
+          <button className="cursor-pointer"> Brands </button>
         </div>
         <div className="flex flex-row gap-2 font-[satoshi]">
           
