@@ -1,16 +1,53 @@
 @import "tailwindcss";
+@theme {
+  --font-integral: "Integral CF", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+}
+
+
 @font-face {
-  font-family: 'IntegralCF';
-  src: url('../src/fonts/integralcf.otf') format('opentype');
-  font-weight: normal;
+  font-family: "Integral CF";
+  src: url("./fonts/Integral_CF/Fontspring-DEMO-integralcf-bold.otf");
+  font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
-    font-family: satoshi;
-    src: url('./fonts/Satoshi-Regular.otf');
-    font-weight: normal;
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi/Satoshi-Light.otf");
+  font-weight: 200;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi/Satoshi-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi/Satoshi-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi/Satoshi-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi/Satoshi-Black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 @theme {
   @keyframes infinite-slide {
     from {

@@ -6,7 +6,7 @@ const CustomerReviews = () => {
   return (
     <div>
       <div className="flex flex-row justify-between items-center m-5 ">
-        <h1 className="font-[IntegralCF] text-3xl ml-5">OUR HAPPY CUSTOMERS </h1>
+        <h1 className="font-integral text-3xl ml-5">OUR HAPPY CUSTOMERS </h1>
         <div className="flex flex-row justify-end">
           <FaArrowLeft />
           <FaArrowRight />
@@ -15,6 +15,9 @@ const CustomerReviews = () => {
       </div>
       <CustomerReviewCard >
         
+
+
+  
         </CustomerReviewCard>
 
     </div>

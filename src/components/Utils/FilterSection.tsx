@@ -15,13 +15,13 @@ import { FaChevronUp } from "react-icons/fa";
 const FilterSection = () => {
   return (
     <>
-      <div className="border-3 border-gray-100 rounded-3xl m-5 w-60 ">
+      <div className="border-3 border-gray-100 rounded-3xl m-5 w-60 mt-20 ">
         <div className=" flex flex-row justify-center items-center gap-30 m-5 p-3 border-gray-100 border-b-1 rounded-xl ">
-          <h1 className="font-[satoshi] text-lg"> Filters </h1>
+          <h1 className="font-satoshi text-lg"> Filters </h1>
           <img src={filter} alt="" className="h-4 w-4" />
         </div>
 
-        <div className="flex flex-col grid grid-cols-1 justify-center items-start font-[satoshi] font-[gray-100] m-5 py-5 border-gray-100 border-b-1 gap-5">
+        <div className="flex flex-col grid grid-cols-1 justify-center items-start font-satoshi font-[gray-100] m-5 py-5 border-gray-100 border-b-1 gap-5">
           <div className="flex flex-row justify-center gap-30">
             <p>T-Shirts</p>
             <FaAngleRight className="mt-1" />
@@ -44,11 +44,11 @@ const FilterSection = () => {
           </div>
         </div>
         <div className=" flex flex-row justify-start items-center gap-30 m-4 p-3 rounded-xl ">
-          <h1 className="font-[satoshi] text-lg"> Price </h1>
+          <h1 className="font-satoshi text-lg"> Price </h1>
           <FaChevronUp className="" />
         </div>
         <div className="flex justify-center border-gray-100 border-b-1 pb-5">
-          <input type="range" className="bg-gray-200  " />
+          <input type="range" className="bg-black  " />
         </div>
         <div className="flex flex-col m-3 p-3">
           <div className="flex flex-row justify-between">
@@ -73,7 +73,7 @@ const FilterSection = () => {
 
           <div className="text-[satoshi] text-lg ml-0 m-3 border-gray-100 border-t-1">
             <h3 className="p-2 text-[satoshi] text-xl "> Size </h3>
-            <div className="text-sm font-[satoshi] w-full flex flex-wrap gap-2">
+            <div className="text-sm font-satoshi w-full flex flex-wrap gap-2">
               <p className="bg-gray-200 rounded-full p-3 w-max">XXX-Small</p>
               <p className="bg-gray-200 rounded-full p-3 w-max">X-Small</p>{" "}
               <p className="bg-gray-200 rounded-full p-3 w-max">Small</p>
@@ -87,11 +87,11 @@ const FilterSection = () => {
           </div>
           <div>
             <div className=" flex flex-row justify-center items-center gap-30 border-gray-100 border-b-1 rounded-xl ">
-              <h1 className="font-[satoshi] text-lg"> Dress Style </h1>
+              <h1 className="font-satoshi text-lg"> Dress Style </h1>
               <FaChevronUp />
             </div>
 
-            <div className="flex flex-col grid grid-cols-1 justify-center items-start font-[satoshi] font-[gray-100]  py-5 border-gray-100 border-b-1 gap-5">
+            <div className="flex flex-col grid grid-cols-1 justify-center items-start font-satoshi font-[gray-100]  py-5 border-gray-100 border-b-1 gap-5">
               <div className="flex flex-row ml-1 gap-30">
                 <p>Casual</p>
                 <FaAngleRight className="" />
@@ -108,10 +108,12 @@ const FilterSection = () => {
                 <p>Gym</p>
                 <FaAngleRight className="" />
               </div>
-             
             </div>
           </div>
         </div>
+        <button className="bg-black text-white text-sm rounded-full p-1 m-3 w-52">
+          Apply Filter
+        </button>
       </div>
     </>
   );

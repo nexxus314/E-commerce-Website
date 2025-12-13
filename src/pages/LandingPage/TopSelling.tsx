@@ -3,7 +3,7 @@ import ClotheLayout from "../../components/cards/ClotheLayout";
 const TopSelling = () => {
   return (
     <div className="flex flex-col justify-center items-center border-2 border-gray-100 border-b-gray-300 m-3 p-5">
-      <h1 className="text-3xl md:text-5xl font-[IntegralCf] my-10">
+      <h1 className="text-3xl md:text-5xl font-integral my-10">
         Top Selling
       </h1>
 

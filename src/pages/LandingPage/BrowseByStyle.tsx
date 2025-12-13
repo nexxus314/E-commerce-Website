@@ -9,7 +9,7 @@ const BrowseByStyle = () => {
       <div className="m-5 p-5 bg-gray-200 rounded-xl">
         
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-[IntegralCf] mb-10 text-center">
+        <h1 className="text-3xl md:text-5xl font-integral mb-10 text-center">
           BROWSE BY DRESS STYLE
         </h1>
 
@@ -23,7 +23,7 @@ const BrowseByStyle = () => {
               alt="Casual" 
               className="w-full h-38 md:h-98 object-cover rounded-xl"
             />
-            <p className="absolute top-4 left-4 text-black font-bold text-4xl drop-shadow-xl font-[satoshi]">
+            <p className="absolute top-4 left-4 text-black font-bold text-4xl drop-shadow-xl font-satoshi">
               Casual
             </p>
           </div>
@@ -34,7 +34,7 @@ const BrowseByStyle = () => {
               alt="Formal" 
               className="w-full md:w-full object-cover rounded-xl"
             />
-            <p className="absolute top-4 left-4  font-[satoshi] text-black font-bold text-4xl drop-shadow-xl">
+            <p className="absolute top-4 left-4  font-satoshi text-black font-bold text-4xl drop-shadow-xl">
               Formal
             </p>
           </div>
@@ -45,7 +45,7 @@ const BrowseByStyle = () => {
               alt="Party" 
               className="w-full object-cover rounded-xl"
             />
-            <p className="absolute top-4 left-4 text-w font-bold  font-[satoshi] text-4xl drop-shadow-xl">
+            <p className="absolute top-4 left-4 text-w font-bold  font-satoshi text-4xl drop-shadow-xl">
               Party
             </p>
           </div>
@@ -56,7 +56,7 @@ const BrowseByStyle = () => {
               alt="Gym" 
               className="w-full md:h-90 h-38 object-cover rounded-xl"
             />
-            <p className="absolute top-4 left-4 text-black font-bold text-4xl  font-[satoshi] drop-shadow-xl">
+            <p className="absolute top-4 left-4 text-black font-bold text-4xl  font-satoshi drop-shadow-xl">
               Gym
             </p>
           </div>

@@ -7,6 +7,7 @@ import BrowseByStyle from "./BrowseByStyle";
 import CustomerReviews from "./CustomerReviews";
 import FooterSection from "./FooterSection";
 import { useState } from "react";
+import CustomerCart from "../CartList/CustomerCart";
 const LandingPage = () => {
 
 
@@ -23,36 +24,36 @@ const LandingPage = () => {
       <NavBar />
       <div className="flex flex-col bg-gray-100 justify-center text-center md:mt-15 md:flex md:flex-row md:grid md:grid-cols-2 gap-4">
         <div className="mx-2 gap-3 mt-30">
-          <h1 className="font-[IntegralCF] md:text-5xl text-3xl mx-3 md:mx-10 text-start">
+          <h1 className="font-integral md:text-5xl text-3xl mx-3 md:mx-10 text-start">
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h1>
-          <p className="text-gray-500 font-[satoshi] mx-3 md:mx-10 my-5 text-start">
+          <p className="text-gray-500 font-satoshi mx-3 md:mx-10 my-5 text-start">
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button className="bg-black flex justify-center md:ml-10 text-center font-[satoshi] text-white p-4 rounded-full mt-3 w-full md:w-50 mr-10">
+          <button className="bg-black flex justify-center md:ml-10 text-center font-satoshi text-white p-4 rounded-full mt-3 w-full md:w-50 mr-10">
             Shop Now
           </button>
           <div className="mt-10 mb-3 grid grid-cols-2 lg:grid-cols-3">
             <div className=" border-2 border-gray-100 border-r-gray-300 p-3">
-              <h3 className="text-3xl font-[IntegralCF] font-extrabold">
+              <h3 className="text-3xl font-integral font-extrabold">
                 200+
               </h3>
-              <p className="font-[satoshi]">International Brands</p>
+              <p className="font-satoshi">International Brands</p>
             </div>
             <div className=" border-2 border-gray-100 border-r-gray-300 p-3">
-              <h3 className="font-extrabold font-[IntegralCF] text-3xl">
+              <h3 className="font-extrabold font-integral text-3xl">
                 2,000+
               </h3>
-              <p className="font-[satoshi]">High-Quality Products</p>
+              <p className="font-satoshi">High-Quality Products</p>
             </div>
 
             <div className=" border-2 border-gray-100  p-3 col-span-2 lg:col-span-1 lg:justify-self-auto justify-self-center">
-              <h3 className="font-extrabold font-[IntegralCF] text-3xl">
+              <h3 className="font-extrabold font-integral text-3xl">
                 30,000+
               </h3>
-              <p className="font-[satoshi]">Happy Customers</p>
+              <p className="font-satoshi">Happy Customers</p>
             </div>
           </div>
         </div>
@@ -72,6 +73,7 @@ const LandingPage = () => {
       <BrowseByStyle/>
       <CustomerReviews/>
       <FooterSection/>
+      
 
       </>
     

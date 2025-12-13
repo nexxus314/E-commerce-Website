@@ -3,7 +3,7 @@ import ClotheLayout from "../../components/cards/ClotheLayout";
 export const NewArrivals = () => {
   return (
     <div className="flex flex-col justify-center items-center m-3  p-5">
-      <h1 className="text-3xl md:text-5xl font-[IntegralCf] mb-10">
+      <h1 className="text-3xl md:text-5xl font-integral mb-10">
         NEW ARRIVALS
       </h1>
       <ClotheLayout />

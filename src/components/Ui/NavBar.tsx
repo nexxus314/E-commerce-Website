@@ -22,15 +22,15 @@ const NavBar = () => {
         }} />
         </button>
     
-        <h1 className="font-bold font-[IntegralCF] text-3xl md:text-4xl">SHOP.CO</h1>
+        <h1 className="font-bold font-integral text-3xl md:text-4xl">SHOP.CO</h1>
 </div>
-        <div className="hidden md:flex flex-row justify-between gap-8 font-[satoshi] rounded-xl ">
+        <div className="hidden md:flex flex-row justify-between gap-8 font-satoshi rounded-xl ">
           <button className="cursor-pointer">Shop</button> 
           <button className="cursor-pointer"> On Sale </button>
           <button className="cursor-pointer"> New Arrivals </button>
           <button className="cursor-pointer"> Brands </button>
         </div>
-        <div className="flex flex-row gap-2 font-[satoshi]">
+        <div className="flex flex-row gap-2 font-satoshi">
           
         <CiSearch className="h-10 w-8 " />
 
@@ -51,7 +51,7 @@ const NavBar = () => {
         />
       )}
       <div
-        className={`fixed top-14 left-0 h-full w-60 bg-white shadow-xl z-20 font-[satoshi] transform 
+        className={`fixed top-14 left-0 h-full w-60 bg-white shadow-xl z-20 font-satoshi transform 
         ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} 
         transition-transform duration-300 md:hidden p-6 flex flex-col gap-6`}
       >
