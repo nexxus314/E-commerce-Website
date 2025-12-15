@@ -1,7 +1,7 @@
 import React from "react";
 import CartComponents from "../../components/cards/CartComponents";
 import OrderSummary from "../../components/cards/OrderSummary";
-import FooterSection from "../LandingPage/FooterSection";
+import FooterSection from "../../components/Ui/FooterSection";
 import NavBar from "../../components/Ui/NavBar";
 const CustomerCart = () => {
   return (

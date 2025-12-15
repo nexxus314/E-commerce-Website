@@ -1,16 +1,23 @@
+import type {Product} from "../types/Products"
+import Rating from "../Ui/Rating"
+import { useNavigate } from "react-router-dom";
+type Props={
+  product: Product;
+  onClick?:()=> void;
+}
 
-import sampleimage from "./sampletshirt.png"
 
-const ClotheLayout = () => {
+const ClotheLayout = ({product,onClick}:Props) => {
+  const navigate = useNavigate();
   return (
-    <div className='flex- flex-col justify-center gap-2 m-2'>
-    <div className='rouned-xl mb-2'>
-        <img src={sampleimage} alt="" className='border-1 border-gray-200 rounded-xl h-59 w-58 hover:scale-105 ease-in-out duration-300' />
+    <div onClick={()=>navigate(`/product/${product.id}`)} className='flex flex-col m-1 rounded-xl gap-5 p-2 hover:scale-105 ease-in-out duration-300'>
+    <div className='rounded-xl flex justify-center ' onClick={onClick}>
+        <img src={product.thumbnail} alt="" className='rounded-xl bg-gray-200 h-50 md:h-60 w-70 ease-in-out duration-300' />
         </div>
-        <div className='gap-3'>
-        <h3 className='font-satoshi text-black'>T-SHIRT WITH TAPE DETAILS</h3>
-        <p>rating stars</p>
-        <h1 className='font-satoshi text-xl text-black'>$100</h1>
+        <div className='gap-3 ml-5'>
+        <h3 className='font-satoshi text-black font-bold'>{product.title}</h3>
+        <Rating rating={product.rating} />
+        <h1 className='font-satoshi text-xl text-black font-bold'>${product.price}</h1>
     </div>
 
     </div>

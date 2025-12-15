@@ -1,61 +1,58 @@
-import React from "react";
+import type { Product } from "../../types/Products";
+import InfoRow from "./InfoRow";
 
-const ProductInfo = () => {
+type Props = {
+  product: Product;
+};
+
+const ProductInfo = ({ product }: Props) => {
   return (
-    <div>
-      <div className="flex flex-col m-2 gap-4 p-3">
-        <h1 className="font-satoshi text-xl font-bold">Product Details</h1>
-        <div className="flex flex-col gap-3">
-          <div className="flex justify-between">
-            <p>Brand</p>
-            <p>Essence</p>
-          </div>
-          <div>
-            <hr className="border-t-1 border-gray-200" />
-          </div>
-          <div className="flex justify-between">
-            <p>SKU</p>
-            <p>BEA-ESS-ESS-001</p>
-          </div>
-          <hr className="border-t-1 border-gray-200" />
+    <div className="max-w-7xl mx-auto px-4 mt-12">
 
-          <div className="flex justify-between">
-            <p>Weight</p>
-            <p>4 kg</p>
-          </div>
-          <hr className="border-t-1 border-gray-200" />
+      <div className="flex justify-center gap-16 text-gray-500 font-satoshi mb-8">
+        <span className="font-bold text-black border-b-2 border-black pb-2">
+          Product Details
+        </span>
+        <span>Rating & Reviews</span>
+      </div>
 
-          <div className="flex justify-between">
-            <p>Dimensions</p>
-            <p>15.14 × 13.08 × 22.99 cm</p>
-          </div>
-          <hr className="border-t-1 border-gray-200" />
+      <hr className="mb-10" />
+
+      <div className="grid md:grid-cols-3 gap-10 font-satoshi">
+
+        <div>
+          <h3 className="font-bold text-lg mb-6">Product Details</h3>
+
+          <InfoRow label="Brand" value={product.brand} />
+          <InfoRow label="SKU" value={product.sku} />
+          <InfoRow label="Weight" value={`${product.weight} kg`} />
+          <InfoRow
+            label="Dimensions"
+            value={`${product.dimensions.width} × ${product.dimensions.height} × ${product.dimensions.depth} cm`}
+          />
         </div>
-      </div>
-      <div className="flex flex-col m-2 gap-4 p-3">
-        <h1 className="font-bold font-satoshi text-xl">Shipping Information</h1>
-         <div className="flex flex-col gap-3">
-          <div className="flex justify-between">
-            <p>Brand</p>
-            <p>Essence</p>
-          </div>
-          <div>
-            <hr className="border-t-1 border-gray-200" />
-          </div>
-          <div className="flex justify-between">
-            <p>SKU</p>
-            <p>BEA-ESS-ESS-001</p>
-          </div>
-          <hr className="border-t-1 border-gray-200" />
 
-          <div className="flex justify-between">
-            <p>Weight</p>
-            <p>4 kg</p>
-          </div>
+        <div>
+          <h3 className="font-bold text-lg mb-6">Shipping Information</h3>
 
-          
-      </div>
-      
+          <InfoRow label="Status" value={product.availabilityStatus} />
+          <InfoRow label="Shipping" value={product.shippingInformation} />
+          <InfoRow
+            label="Min Order Qty"
+            value={product.minimumOrderQuantity.toString()}
+          />
+          <InfoRow label="Return Policy" value={product.returnPolicy} />
+        </div>
+
+        <div>
+          <h3 className="font-bold text-lg mb-6">Additional Info</h3>
+
+          <InfoRow label="Category" value={product.category} />
+          <InfoRow label="Tags" value={product.tags.join(", ")} />
+          <InfoRow label="Warranty" value={product.warrantyInformation} />
+          <InfoRow label="Stock" value={product.stock.toString()} />
+        </div>
+
       </div>
     </div>
   );

@@ -6,17 +6,22 @@ import LandingPage from './pages/LandingPage/LandingPage.tsx'
 import ProductExplore from './pages/ProductExplorePage/ProductExplore.tsx'
 import CustomerCart from './pages/CartList/CustomerCart.tsx'
 import ProductDetails from './pages/ProductDetails/ProductDetails.tsx'
+import { ProductProvider } from './components/context/ProductContext.tsx'
 
 const router = createBrowserRouter([
   {path:"/",element:<LandingPage/>},
   {path:"Explore",element:<ProductExplore/>},
   {path:"cart",element:<CustomerCart/>},
-  {path:"product:productId",element:<ProductDetails/>}
+  {path:"/product/:id",element:<ProductDetails/>,
+    
+  }
   
 ]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <ProductProvider>
     <RouterProvider router={router}/>
+    </ProductProvider>
   </StrictMode>,
 )
