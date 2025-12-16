@@ -10,7 +10,7 @@ type Review = {
 };
 
 type Props = {
-  review: Review[];
+  review: Review;
 };
 
 const CustomerReviewCard = ({review}:Props) => {

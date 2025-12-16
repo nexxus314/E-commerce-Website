@@ -23,7 +23,7 @@ const ReviewSection = ({ reviews }: Props) => {
 
   return (
     <div className="grid md:grid-cols-3 gap-6">
-      {reviews.map((review, index) => (
+           {reviews.map((review, index) => (
         <CustomerReviewCard key={index} review={review} />
       ))}
     </div>
