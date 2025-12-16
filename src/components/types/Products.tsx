@@ -2,27 +2,38 @@ export type Product = {
   id: number;
   title: string;
   description: string;
-  category: string;
+
   price: number;
   discountPercentage: number;
   rating: number;
   stock: number;
-  tags: string[];
+
   brand: string;
   sku: string;
+  category: string;
+
   weight: number;
   dimensions: {
     width: number;
     height: number;
     depth: number;
   };
-  reviews: {
+
+  availabilityStatus: string;
+  shippingInformation: string;
+  returnPolicy: string;
+  minimumOrderQuantity: number;
+  warrantyInformation: string;
+
+  tags: string[];
+  thumbnail: string;
+  images: string[];
+
+  reviews?: {
     rating: number;
     comment: string;
     date: string;
     reviewerName: string;
     reviewerEmail: string;
   }[];
-  thumbnail: string;
-  images: string[];
 };

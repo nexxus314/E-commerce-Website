@@ -1,6 +1,11 @@
 import { useState } from "react";
+type Props = {
+  images: string[];
+  thumbnail: string;
+};
 
-const ProductImages = ({ images, thumbnail }) => {
+
+const ProductImages = ({ images, thumbnail }:Props) => {
   const [selectedImage, setSelectedImage] = useState(
     images?.[0] || thumbnail
   );
