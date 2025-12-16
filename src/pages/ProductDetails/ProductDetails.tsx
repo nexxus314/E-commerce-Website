@@ -22,7 +22,6 @@ const ProductDetails = () => {
       <NavBar/>
       <ProductDetailsCard product = {product}/>
       <ProductInfo product = {product}/>
-      <ReviewSection reviews={product.reviews ?? []}/>
       <FooterSection/>
 
       

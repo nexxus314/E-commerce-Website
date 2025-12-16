@@ -40,7 +40,7 @@ const ProductInfo = ({ product }: Props) => {
 
       {activeTab === "details" && (
         <div className="grid md:grid-cols-3 gap-10 font-satoshi">
-          <div>
+          <div className="mb-15">
             <h3 className="font-bold text-lg mb-6">Product Details</h3>
             <InfoRow label="Brand" value={product.brand} />
             <InfoRow label="SKU" value={product.sku} />
@@ -72,9 +72,12 @@ const ProductInfo = ({ product }: Props) => {
         </div>
       )}
 
-      {activeTab === "reviews" && (
-        <ReviewSection reviews={product.reviews ?? []} />
-      )}
+     {activeTab === "reviews" && (
+  <div className="relative mt-12">
+    <ReviewSection reviews={product.reviews ?? []} />
+  </div>
+)}
+
     </div>
   );
 };
