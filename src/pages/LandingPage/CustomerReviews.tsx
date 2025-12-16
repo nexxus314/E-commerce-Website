@@ -1,25 +1,25 @@
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa6";
-import CustomerReviewCard from "../../components/cards/CustomerReviewCard"
+type Review = {
+  name: string;
+  rating: number;
+  comment: string;
+};
 
-const CustomerReviews = () => {
+type Props = {
+  review: Review;
+};
+
+const CustomerReviews = ({ review }: Props) => {
   return (
-    <div>
-      <div className="flex flex-row justify-between items-center m-5 ">
-        <h1 className="font-integral text-3xl ml-5">OUR HAPPY CUSTOMERS </h1>
-        <div className="flex flex-row justify-end">
-          <FaArrowLeft />
-          <FaArrowRight />
-          </div>
+    <div className="m-10">
+      <h2 className="text-2xl font-integral mb-4">Customer Reviews</h2>
 
+      <div className="p-4 border rounded-xl">
+        <p className="font-satoshi font-bold">{review.name}</p>
+        <p className="font-satoshi text-sm text-gray-500">
+          ⭐ {review.rating}/5
+        </p>
+        <p className="font-satoshi mt-2">{review.comment}</p>
       </div>
-      <CustomerReviewCard >
-        
-
-
-  
-        </CustomerReviewCard>
-
     </div>
   );
 };

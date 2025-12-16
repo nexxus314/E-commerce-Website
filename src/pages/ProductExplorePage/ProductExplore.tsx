@@ -1,4 +1,3 @@
-import FilterSection from "../../components/Utils/FilterSection";
 import NavBar from "../../components/Ui/NavBar";
 import FooterSection from "../../components/Ui/FooterSection";
 import { useProducts } from "../../components/context/ProductContext";

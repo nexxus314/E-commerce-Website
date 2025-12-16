@@ -85,7 +85,11 @@ const LandingPage = () => {
       </div>
       
       <BrowseByStyle />
-      <CustomerReviews />
+      <CustomerReviews review={{
+    name: "Adhithyan",
+    rating: 5,
+    comment: "Great quality and fast delivery!",
+  }}/>
       <FooterSection />
     </>
   );
