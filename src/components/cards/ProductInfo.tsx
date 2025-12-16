@@ -1,4 +1,3 @@
-import type { Product } from "../../types/Products";
 import InfoRow from "./InfoRow";
 
 type Props = {

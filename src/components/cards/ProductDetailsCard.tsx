@@ -1,7 +1,24 @@
 import { FiMinus, FiPlus } from "react-icons/fi";
 import Rating from "../Ui/Rating";
 import ProductImages from "./ProductImage";
-const ProductDetailsCard = ({ product }) => {
+import type{Product } from "../types/Products"
+import {useCart} from "../../components/context/CartContext"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+type Props = {
+  product: Product;
+};
+const ProductDetailsCard = ({ product }:Props) => {
+  const {addToCart}= useCart();
+  const [quantity,setQuantity]=useState(1)
+  const navigate = useNavigate();
+  const handleBuyNow = () => {
+  addToCart(product, quantity);
+  navigate("/cart");
+};
+
   return (
     <div className="max-w-7xl mt-15 mx-auto p-4 md:p-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -56,18 +73,25 @@ const ProductDetailsCard = ({ product }) => {
           </div>
           <div className="flex w-full gap-4 mt-10">
           <div className="flex items-center justify-between bg-gray-100 rounded-full px-5 py-3 w-[140px]">
-            <button className="text-xl hover:text-gray-600">
+            <button className="text-xl hover:text-gray-600"  onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
               <FiMinus />
             </button>
-            <span className="font-bold text-lg">1</span>
-            <button className="text-xl hover:text-gray-600">
+            <span className="font-bold text-lg">{quantity}</span>
+            <button className="text-xl hover:text-gray-600"  onClick={() => setQuantity((q) => q + 1)}>
               <FiPlus />
             </button>
           </div>
 
-          <button className="flex-1 bg-black text-white rounded-full py-3 font-bold font-satoshi hover:bg-gray-800 transition-colors">
+          <button onClick={()=>addToCart(product, quantity)} className="flex-1 bg-black text-white rounded-full py-3 font-bold font-satoshi hover:bg-gray-800 transition-colors">
             Add to Cart
           </button>
+          <button
+  onClick={handleBuyNow}
+  className="flex-1 border border-black text-black rounded-full py-3 font-bold"
+>
+  Buy Now
+</button>
+
         </div>
         </div>
 

@@ -7,6 +7,7 @@ import ProductExplore from './pages/ProductExplorePage/ProductExplore.tsx'
 import CustomerCart from './pages/CartList/CustomerCart.tsx'
 import ProductDetails from './pages/ProductDetails/ProductDetails.tsx'
 import { ProductProvider } from './components/context/ProductContext.tsx'
+import { CartProvider } from './components/context/CartContext.tsx'
 
 const router = createBrowserRouter([
   {path:"/",element:<LandingPage/>},
@@ -20,8 +21,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <CartProvider>
     <ProductProvider>
     <RouterProvider router={router}/>
     </ProductProvider>
+    </CartProvider>
   </StrictMode>,
 )

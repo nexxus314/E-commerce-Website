@@ -18,6 +18,7 @@ const ClotheLayout = ({product,onClick}:Props) => {
         <h3 className='font-satoshi text-black font-bold'>{product.title}</h3>
         <Rating rating={product.rating} />
         <h1 className='font-satoshi text-xl text-black font-bold'>${product.price}</h1>
+        
     </div>
 
     </div>
